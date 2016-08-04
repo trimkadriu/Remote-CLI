@@ -1,0 +1,35 @@
+<div class="page-header">
+  <h2>Machines</h2>
+  <span class="header-link">
+    <%= link_to 'New Machine', new_machine_path, class: 'btn btn-teal' %>
+  </span>
+</div>
+
+<table class="table table-hover" data-order="[[ 3, &quot;desc&quot; ]]">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Identifier</th>
+    <th>Date added</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @machines.each do |machine| %>
+      <tr>
+        <td><%= machine.name %></td>
+        <td><%= machine.identifier %></td>
+        <td><%= machine.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+        <td class="table-actions" style="width: 240px;">
+          <div class="btn-group">
+            <%= link_to '<i class="fa fa-eye"></i> Show'.html_safe, machine, class: 'btn btn-sm btn-default'%>
+            <%= link_to '<i class="fa fa-pencil"></i> Edit'.html_safe, edit_machine_path(machine), class: 'btn btn-sm btn-default' %>
+            <%= link_to '<i class="fa fa-trash"></i> Delete'.html_safe, machine, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-default' %>
+          </div>
+          <%= link_to '<i class="fa fa-terminal"></i> Command Control'.html_safe, machine_remote_control_url(machine), class: 'btn btn-sm btn-default'%>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

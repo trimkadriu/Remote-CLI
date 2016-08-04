@@ -1,0 +1,17 @@
+<% if entity.errors.any? %>
+    <div class="panel panel-danger">
+      <div class="panel-heading"><%= pluralize(entity.errors.count, "error") %> prohibited this <%= entity.class.name %> from being saved:</div>
+      <div class="panel-body">
+        <ul>
+          <% entity.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+<% end %>
+<script>
+  $(document).ready(function() {
+      $('.form-group .field_with_errors').next('br').remove();
+  });
+</script>

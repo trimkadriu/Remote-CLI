@@ -1,0 +1,55 @@
+<div class="top-bar">
+  <div class="container">
+    <div class="pull-left">
+      <ul class="list-inline">
+        <li>Contact <a href="mailto:me@trimkadriu.com" target="_blank">@Trim Kadriu</a></li>
+      </ul>
+    </div>
+    <% unless not user_signed_in? %>
+    <div class="pull-right user">
+      <ul class="list-inline">
+        <li>
+            <a href="#"><%= current_user.name %> <span class="caret"></span></a>
+          <div class="user-links">
+            <a href="<%= edit_user_path(current_user) %>">Profile</a>
+            <a href="<%= destroy_user_session_path %>" data-method="delete">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <% end %>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2">
+        <a href="/"><%= image_tag("icon.png", :class => "logo", :alt => "Cool Experience") %></a>
+      </div>
+      <nav class="col-xs-10 text-right">
+        <% unless not user_signed_in? %>
+            <ul class="nav navbar-nav">
+              <li <%= 'class=active' if params[:controller] == 'dashboard' %> >
+                <a href="<%= dashboard_url %>">
+                  <span class="menu-icon"><i class="fa fa-dashboard"></i></span>
+                  <span class="menu-title">Dashboard</span>
+                </a>
+              </li>
+              <li <%= 'class=active' if params[:controller] == 'users' %> >
+                <a href="<%= users_url %>">
+                  <span class="menu-icon"><i class="fa fa-user"></i></span>
+                  <span class="menu-title">Users</span>
+                </a>
+              </li>
+              <li <%= 'class=active' if params[:controller] == 'machines' %> >
+                <a href="<%= machines_url %>">
+                  <span class="menu-icon"><i class="fa fa-desktop"></i></span>
+                  <span class="menu-title">Machines</span>
+                </a>
+              </li>
+            </ul>
+        <% end %>
+      </nav>
+    </div>
+  </div>
+</header>

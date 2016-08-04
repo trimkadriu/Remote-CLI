@@ -1,0 +1,26 @@
+<main>
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <%= action_cable_meta_tag %>
+          <% if not notice.nil? %>
+              <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <%= notice %>
+              </div>
+          <% elsif not alert.nil? %>
+              <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <%= alert %>
+              </div>
+          <% end%>
+
+          <%= yield %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

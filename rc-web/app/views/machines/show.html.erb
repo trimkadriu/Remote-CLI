@@ -1,0 +1,16 @@
+<div class="page-header">
+  <h2>Showing machine</h2>
+  <span class="header-link">
+    <%= link_to '<i class="fa fa-angle-left"></i> Back to machines'.html_safe, machines_path %>
+  </span>
+</div>
+<p>
+  <strong>Name:</strong>
+  <%= @machine.name %>
+</p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @machine.identifier %>
+</p>
+<%= link_to '<i class="fa fa-pencil"></i> Edit this machine'.html_safe, edit_machine_path(@machine), class: 'btn btn-teal' %>
