@@ -1,0 +1,34 @@
+<div class="page-header">
+  <h2>Users</h2>
+  <span class="header-link">
+    <%= link_to 'New User', new_user_path, class: 'btn btn-teal' %>
+  </span>
+</div>
+
+<table class="table table-hover" data-order="[[ 3, &quot;desc&quot; ]]">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date added</th>
+        <th>Actions</th>
+      </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+        <td class="table-actions" style="width: 240px;">
+          <div class="btn-group">
+            <%= link_to '<i class="fa fa-eye"></i> Show'.html_safe, user, class: 'btn btn-sm btn-default'%>
+            <%= link_to '<i class="fa fa-pencil"></i> Edit'.html_safe, edit_user_path(user), class: 'btn btn-sm btn-default' %>
+            <%= link_to '<i class="fa fa-trash"></i> Delete'.html_safe, user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-default' %>
+          </div>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RcWeb</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <%= render :file => 'layouts/header' %>
+      <%= render :file => 'layouts/content' %>
+      <div class="push"></div>
+    </div>
+    <%= render :file => 'layouts/footer' %>
+  </body>
+</html>

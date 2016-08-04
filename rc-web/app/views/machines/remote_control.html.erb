@@ -1,0 +1,12 @@
+<%= javascript_include_tag "machines" %>
+<div class="page-header">
+  <h2>Remote Control</h2>
+  <span class="header-link">
+    <%= link_to '<i class="fa fa-angle-left"></i> Back to machines'.html_safe, machines_path %>
+  </span>
+</div>
+<div>
+  <textarea id="result" class="form-control cmd-result" spellcheck="false" disabled></textarea>
+  <input type="text" id="command" class="form-control cmd-command" autocomplete="off" onkeydown="onEnter(event)"/>
+  <input type="hidden" id="authid" value="<%= @machine.identifier %>"/>
+</div>

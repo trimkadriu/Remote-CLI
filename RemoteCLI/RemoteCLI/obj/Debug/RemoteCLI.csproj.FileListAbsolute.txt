@@ -1,0 +1,10 @@
+D:\Projects\remote-cli\RemoteCLI\RemoteCLI\bin\Debug\RemoteCLI.exe.config
+D:\Projects\remote-cli\RemoteCLI\RemoteCLI\bin\Debug\RemoteCLI.exe
+D:\Projects\remote-cli\RemoteCLI\RemoteCLI\bin\Debug\RemoteCLI.pdb
+D:\Projects\remote-cli\RemoteCLI\RemoteCLI\obj\Debug\RemoteCLI.csprojResolveAssemblyReference.cache
+D:\Projects\remote-cli\RemoteCLI\RemoteCLI\obj\Debug\RemoteCLI.Properties.Resources.resources
+D:\Projects\remote-cli\RemoteCLI\RemoteCLI\obj\Debug\RemoteCLI.csproj.GenerateResource.Cache
+D:\Projects\remote-cli\RemoteCLI\RemoteCLI\obj\Debug\RemoteCLI.exe
+D:\Projects\remote-cli\RemoteCLI\RemoteCLI\obj\Debug\RemoteCLI.pdb
+D:\Projects\remote-cli\RemoteCLI\RemoteCLI\obj\Debug\RemoteCLI.MainForm.resources
+D:\Projects\remote-cli\RemoteCLI\RemoteCLI\bin\Debug\websocket-sharp.dll

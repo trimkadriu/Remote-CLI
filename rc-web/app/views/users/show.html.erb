@@ -1,0 +1,16 @@
+<div class="page-header">
+  <h2>Showing user</h2>
+  <span class="header-link">
+    <%= link_to '<i class="fa fa-angle-left"></i> Back to users'.html_safe, users_path %>
+  </span>
+</div>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+<%= link_to '<i class="fa fa-pencil"></i> Edit this users'.html_safe, edit_user_path(@user), class: 'btn btn-teal' %>

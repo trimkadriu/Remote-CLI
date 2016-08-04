@@ -1,0 +1,15 @@
+<%= form_for(@machine) do |f| %>
+    <%= render '/shared/form_errors', entity: @machine %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :identifier %><br>
+      <%= f.text_field :identifier %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
